@@ -2,30 +2,7 @@
   <!-- dentro del row hay 12 columnas, el primer col de este row está ocupando 3,
   y el siguiente col ocupará las columnas que queden si es que no se especifica -->
   <div class="col-3">
-    <h2>Busquedas</h2>
-    <hr>
-    <ul class="list-group">
-      <!-- el routerLink hace que no se refresque el navegador -->
-      <!-- el routerLinkActive se le agrega la clase que queremos cuando estemos en esa ruta -->
-      <li routerLink=""
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          class="list-group-item">
-        Buscar país
-      </li>
-
-      <li routerLink="region"
-          routerLinkActive="active"
-          class="list-group-item">
-        Por región
-      </li>
-
-      <li routerLink="capital" 
-          routerLinkActive="active"
-          class="list-group-item">
-        Por capital
-      </li>
-    </ul>
+    <app-sidebar></app-sidebar>
   </div>
 
   <div class="col">
