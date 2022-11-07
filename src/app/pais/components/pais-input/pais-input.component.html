@@ -1,0 +1,8 @@
+<!-- el autocomplete en off es para que no autocomplete cuando se escribe en el input -->
+<form (ngSubmit)="buscar()" autocomplete="off">
+  <input type="text"
+          name="termino"
+          class="form-control"
+          [(ngModel)]="termino"
+          placeholder="Buscar país..." /> 
+</form>
