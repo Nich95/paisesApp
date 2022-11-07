@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit, Input } from '@angular/core';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 
@@ -13,6 +13,8 @@ export class PaisInputComponent implements OnInit {
   // en este caso el evento que se va a emitir es termino y el termino es de tipo string
   @Output() onEnter: EventEmitter<string> = new EventEmitter();
   @Output() onDebounce: EventEmitter<string> = new EventEmitter();
+
+  @Input() placeholder: string = ''; // este recibe la el valor del html por-capital y por-pais
 
   debouncer: Subject<string> = new Subject(); // este se emite cuando el usuario deja de escribir, para esto necesitamos el OnInit
   termino: string = '';
