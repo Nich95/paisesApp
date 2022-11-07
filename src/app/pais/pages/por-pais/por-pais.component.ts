@@ -14,9 +14,9 @@ export class PorPaisComponent {
 
   constructor( private paisService: PaisService ) {}
 
-  buscar() {
+  buscar( termino: string ) {
     this.hayError = false;
-    console.log( this.termino );
+    this.termino = termino; // aqui se le dice que el this.terimno es igual al termino que se recibe como argumento 
 
     this.paisService.buscarPais( this.termino )
       .subscribe( ( paises ) => {
