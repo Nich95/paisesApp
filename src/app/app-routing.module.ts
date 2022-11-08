@@ -23,7 +23,7 @@ const routes: Routes = [ // esto es un arreglo de objetos
   },
   {
     // esta ruta necesita de un argumento, el argumento seria el id del país
-    path: 'pais/:id',
+    path: 'pais/:id', // el nombre puede ser cualquiera en es este es id
     component: VerPaisComponent
   },
   // en caso que el usuario navegue a una ruta que no está definida se crea la ruta de excepcion
