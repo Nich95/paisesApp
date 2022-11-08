@@ -22,4 +22,9 @@ export class PaisService {
     const url = `${ this._apiUrl }/capital/${ termino }`;
     return this.http.get<Country[]>(url);
   }
+
+  getPaisPorAlpha( id: string): Observable<Country> { // Country va sin los corchetes porque estoy retornando un solo país
+    const url = `${ this._apiUrl }/alpha/${ id }`;
+    return this.http.get<Country>(url);
+  }
 }
